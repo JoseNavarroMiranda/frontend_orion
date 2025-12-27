@@ -1,0 +1,11 @@
+# Exclude the node_modules directory in the root
+node_modules
+
+# For monorepos or nested directories, use:
+**/node_modules
+
+# Other common exclusions (optional)
+.git
+.gitignore
+npm-debug.log
+.vscode

@@ -1,0 +1,17 @@
+services:
+  frontend:
+    build: .
+    container_name: web-frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm run dev -- --host 0.0.0.0 --port 5173
+    networks:
+      - backend-net
+
+networks:
+  backend-net:
+    external: true
+    name: backend-net
