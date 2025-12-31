@@ -4,11 +4,11 @@ import Footer from './components/static/footer';
 
 function App() {
   return (
-    <div classname="App">
+    <div classname="MainPageNavbar">
       <Navbar />
-      <Information/>
-      <Footer />
     </div>
+
+
   );
 }
 
