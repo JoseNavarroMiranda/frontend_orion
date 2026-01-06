@@ -21,12 +21,10 @@ function Navbarmenu() {
     <header className="sticky top-0 z-50">
       <nav className="bg-black text-white backdrop-blur-md  border-black shadow-lg shadow-black">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-          {/* Logo */}
           <a href="#inicio" className="flex items-center gap-2 font-semibold">
             <span className="text-lg">*imagen*</span>
           </a>
 
-          {/* Botón mobile */}
           <button
             className="lg:hidden inline-flex items-center justify-center rounded-md p-2 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20"
             aria-label={open ? "Cerrar menú" : "Abrir menú"}
@@ -37,7 +35,6 @@ function Navbarmenu() {
             <span className="text-xl leading-none">{open ? "✕" : "☰"}</span>
           </button>
 
-          {/* Menú desktop */}
           <div className="hidden lg:flex items-center gap-2">
             {items.map((label) => {
               const id = slugify(label);
@@ -55,7 +52,6 @@ function Navbarmenu() {
           </div>
         </div>
 
-        {/* Menú mobile desplegable */}
         <div
           id="nav-menu"
           className={[

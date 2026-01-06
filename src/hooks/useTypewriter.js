@@ -25,7 +25,6 @@ export function useTypewriter(phrases, options = {}) {
     if (prefersReducedMotion) return;
     if (!phrases?.length) return;
 
-    // si no quieres loop y ya terminó la última
     if (!loop && phraseIndex === phrases.length - 1 && !isDeleting && subIndex === currentPhrase.length) {
       return;
     }

@@ -1,17 +1,12 @@
 import { useTypewriter } from "./useTypewriter";
 
-export default function Typewriter({
-  phrases,
-  className = "",
-  cursorClassName = "ml-1 inline-block w-[0.6ch] animate-pulse opacity-80",
-  cursor = "|",
-  options,
-}) {
-  const { text } = useTypewriter(phrases, options);
+export default function Typewriter({ phrases, className = "", cursorClassName = "...", cursor = "|", options }) {
+  const { text } = useTypewriter(phrases, options)
+  const safeText = text || "\u00A0" 
 
   return (
-    <span className={className} aria-live="polite" aria-atomic="true">
-      {text}
+    <span className={`inline-flex min-w-[14ch] ${className}`} aria-live="polite" aria-atomic="true">
+      {safeText}
       <span className={cursorClassName}>{cursor}</span>
     </span>
   );
