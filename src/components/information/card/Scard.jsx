@@ -3,7 +3,7 @@ import Card from "./Card"
 export default function Sslide (){
     return(
         <Card
-        badge="Proceso"
+        badge="Sistemas Saas"
         title="De idea a publicación"
         desc="Un flujo claro para que avances rápido y con entregables en cada etapa."
       >

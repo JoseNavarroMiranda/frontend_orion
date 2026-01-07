@@ -5,7 +5,7 @@ const PHRASES = ["atraer a más clientes", "ventas por internet", "automatizar p
 
 function MainInfo() {
   return (
-<section className="relative overflow-hidden bg-gradient-to-br from-black via-purple-500/60 to-indigo-950 text-white">
+<section className="relative overflow-hidden bg-linear-to-br from-black via-purple-500/60 to-indigo-950 text-white">
 <div className="mx-auto flex max-w-6xl flex-col-reverse items-center gap-10 px-6 py-16 lg:flex-row lg:items-center lg:py-24">
 
         <div className="flex-1 w-full max-w-xl space-y-6 text-center lg:text-left">
@@ -15,7 +15,7 @@ function MainInfo() {
               <span className="inline-block min-w-[20ch] whitespace-nowrap">
                 <Typewriter
                   phrases={PHRASES}
-                  className="bg-gradient-to-r from-indigo-300 via-fuchsia-300 to-indigo-300 bg-clip-text text-transparent"
+                  className="bg-linear-to-r from-indigo-300 via-fuchsia-300 to-indigo-300 bg-clip-text text-transparent"
                   options={{
                     typingSpeed: 55,
                     deletingSpeed: 30,
