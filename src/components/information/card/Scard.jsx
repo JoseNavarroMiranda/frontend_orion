@@ -1,18 +1,18 @@
 import Card from "./Card"
 
-export default function Sslide (){
-    return(
-        <Card
-        badge="Sistemas Saas"
-        title="De idea a publicación"
-        desc="Un flujo claro para que avances rápido y con entregables en cada etapa."
-      >
-        <ol className="mt-2 space-y-2 text-sm text-white">
-          <li>1) Brief + objetivos</li>
-          <li>2) Diseño (UI) + contenido</li>
-          <li>3) Desarrollo + despliegue</li>
-        </ol>
-      </Card>   
-    )
+export default function Sslide() {
+  return (
+    <Card
+      badge="Innovación"
+      title="Desarrollo e investigación"
+      desc="Entendemos tu negocio para diseñar una solución a medida, con enfoque en calidad y escalabilidad."
+    >
+      <ul className="mt-2 space-y-2 text-sm text-white">
+        <li>• Levantamiento de requerimientos y alcance.</li>
+        <li>• Prototipo y validación de propuesta.</li>
+      </ul>
+    </Card>
+
+  )
 }
 
