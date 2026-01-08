@@ -9,7 +9,7 @@ const PHRASES = [
 
 function MainInfo() {
   return (
-    <section className="relative overflow-hidden bg-linear-to-br from-black via-purple-500/60 to-indigo-950 text-white">
+    <section className="relative overflow-hidden bg-linear-to-br from-black via-purple-900/85 to-indigo-900/95 text-white">
       <div className="mx-auto flex max-w-6xl flex-col-reverse items-center gap-10 px-6 py-16 lg:flex-row lg:items-center lg:py-24">
         <div className="flex-1 w-full max-w-xl space-y-6 text-center lg:text-left">
           <h1 className="text-4xl font-semibold leading-tight md:text-5xl">
