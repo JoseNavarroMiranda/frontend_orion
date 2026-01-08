@@ -1,27 +1,16 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
-function slugify(label) {
-  return label
-    .toLowerCase()
-    .normalize("NFD") // separa acentos
-    .replace(/[\u0300-\u036f]/g, "") // elimina acentos
-    .replace(/\s+/g, "-") // espacios a guiones
-    .replace(/[^a-z0-9-]/g, ""); // limpia caracteres raros
-}
-
-function Navbarmenu() {
-  const items = useMemo(
-    () => ["Inicio", "Servicios", "Quienes somos", "Contacto"],
-    []
-  );
-
+export default function Navbarmenu() {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50">
-      <nav className="bg-black text-white backdrop-blur-md  border-black shadow-lg shadow-black">
+      <nav className="bg-black text-white backdrop-blur-md border-black shadow-lg shadow-black">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-          <a href="#inicio" className="flex items-center gap-2 font-semibold">
+          <a
+            href={`#${encodeURIComponent("Inicio")}`}
+            className="flex items-center gap-2 font-semibold"
+          >
             <span className="text-lg">*imagen*</span>
           </a>
 
@@ -36,19 +25,17 @@ function Navbarmenu() {
           </button>
 
           <div className="hidden lg:flex items-center gap-2">
-            {items.map((label) => {
-              const id = slugify(label);
-              return (
-                <a
-                  key={label}
-                  href={`#${id}`}
-                  className="px-5 py-5 text-l font-medium rounded-md text-white/150 transition
-                             hover:text-white hover:bg-white/10
-                             focus:outline-none focus:ring-2 focus:ring-fuchsia-300/30">
-                  {label}
-                </a>
-              );
-            })}
+            {["Inicio", "Servicios", "Quienes somos", "Contacto"].map((label) => (
+              <a
+                key={label}
+                href={`#${encodeURIComponent(label)}`}
+                className="px-5 py-4 text-lg font-medium rounded-md text-white/90 transition
+                           hover:text-white hover:bg-white/10
+                           focus:outline-none focus:ring-2 focus:ring-fuchsia-300/30"
+              >
+                {label}
+              </a>
+            ))}
           </div>
         </div>
 
@@ -61,12 +48,11 @@ function Navbarmenu() {
         >
           <div className="mx-auto max-w-6xl px-6 pb-4">
             <div className="mt-2 rounded-xl border border-white/10 bg-white/5 p-2">
-              {items.map((label) => {
-                const id = slugify(label);
-                return (
+              {["Inicio", "Servicios", "Quienes somos", "Contacto"].map(
+                (label) => (
                   <a
                     key={label}
-                    href={`#${id}`}
+                    href={`#${encodeURIComponent(label)}`}
                     onClick={() => setOpen(false)}
                     className="block rounded-lg px-3 py-2 text-sm font-medium text-white/85 transition
                                hover:bg-white/10 hover:text-white
@@ -74,8 +60,8 @@ function Navbarmenu() {
                   >
                     {label}
                   </a>
-                );
-              })}
+                )
+              )}
             </div>
           </div>
         </div>
@@ -83,5 +69,3 @@ function Navbarmenu() {
     </header>
   );
 }
-
-export default Navbarmenu;
