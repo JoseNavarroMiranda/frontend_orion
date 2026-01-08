@@ -1,12 +1,9 @@
-import Mvv from "./Values/Mvv";
-import Presentation from "./Values/Presentation";
-
+import Presentation from "./values/Presentation";
 
 export default function AboutUs() {
   return (
     <>
       <Presentation />
-      <Mvv />
     </>
   );
 }
