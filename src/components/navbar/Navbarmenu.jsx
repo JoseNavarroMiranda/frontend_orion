@@ -25,7 +25,7 @@ export default function Navbarmenu() {
           </button>
 
           <div className="hidden lg:flex items-center gap-2">
-            {["Inicio", "Servicios", "Quienes somos", "Contacto"].map((label) => (
+            {["Inicio","Quienes somos", "Contacto"].map((label) => (
               <a
                 key={label}
                 href={`#${encodeURIComponent(label)}`}

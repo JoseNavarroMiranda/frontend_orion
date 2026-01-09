@@ -18,30 +18,6 @@ export default function Presentation() {
               Somos un equipo de desarrolladores apasionados por la innovación y la
               creación de sitios web modernos, funcionales y centrados en la experiencia del usuario.
             </h1>
-  
-            <p className="max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
-              Creamos soluciones enfocadas en resultados: velocidad, SEO técnico y una interfaz clara
-              para que tus clientes entiendan tu propuesta y te contacten más rápido.
-            </p>
-  
-            <ul className="grid gap-2 text-sm text-white/85 sm:grid-cols-2">
-              <li className="flex gap-2">
-                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-fuchsia-300" />
-                Diseño responsivo y moderno
-              </li>
-              <li className="flex gap-2">
-                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-fuchsia-300" />
-                SEO técnico y performance
-              </li>
-              <li className="flex gap-2">
-                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-fuchsia-300" />
-                UX enfocado en conversión
-              </li>
-              <li className="flex gap-2">
-                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-fuchsia-300" />
-                Deploy y soporte (opcional)
-              </li>
-            </ul>
           </div>
           <Mvv />
         </div>
