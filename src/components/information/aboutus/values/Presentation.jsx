@@ -3,8 +3,7 @@ export default function Presentation() {
     return (
       <section
         className="relative min-h-[600px] overflow-hidden bg-center bg-no-repeat bg-cover text-white"
-        style={{ backgroundImage: "url(/mvv.jpg)" }}
-      >
+        style={{ backgroundImage: "url(/mvv.jpg)" }}>
         <div className="absolute inset-0 bg-black/55" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
   
