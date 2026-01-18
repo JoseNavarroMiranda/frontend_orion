@@ -6,6 +6,7 @@ import MainInfo from "./components/information/mainpage/MainInfo.jsx";
 import MiddleInfo from "./components/information/mainpage/MiddleInfo.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import AboutUs from "./components/information/aboutus/AboutUs.jsx";
+import ContactComponent from "./components/contact/ContactComponent.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById("root")).render(
     <MainInfo />
     <MiddleInfo />
     <AboutUs />
+    <ContactComponent/>
     <Footer />
   </StrictMode>
 );
