@@ -12,8 +12,21 @@ export default function ContactComponent() {
     });
 
     const handleChange = (e) =>{
+        const {name , value} = e.target;
+
+        if (name === "phone"){
+        const digits = value.replace(/\D/g, "").slice(0,10);
+        setForm((prev) => ({...prev, phone : digits}));
+        return;
+      }
+        if (name === "description_service"){
+          setForm((prev) => ({...prev, description_service: value.slice(0,300)}));
+          return;
+        }
+
         setForm((prev) => ({...prev, [e.target.name]: e.target.value}));
-    };
+
+      };
 
     const handleSubmit = async (e) =>{
         e.preventDefault();
@@ -57,13 +70,13 @@ export default function ContactComponent() {
   
             <label className="space-y-1 block">
               <span className="text-sm text-indigo-100/80">Teléfono</span>
-              <input name="phone" value={form.phone} onChange={handleChange}
+              <input name="phone" maxLength={10} value={form.phone} onChange={handleChange}
                 className="w-full rounded-2xl bg-white/5 border border-white/15 px-4 py-3 text-white placeholder:text-white/50 focus:ring-2 focus:ring-indigo-300/70 focus:border-transparent" />
             </label>
   
             <label className="space-y-1 block">
               <span className="text-sm text-indigo-100/80">Descripción</span>
-              <textarea name="description_service" value={form.description_service} onChange={handleChange} rows={4}
+              <textarea name="description_service" maxLength={300} value={form.description_service} onChange={handleChange} rows={4}
                 className="w-full rounded-2xl bg-white/5 border border-white/15 px-4 py-3 text-white placeholder:text-white/50 focus:ring-2 focus:ring-indigo-300/70 focus:border-transparent resize-none" />
             </label>
   
